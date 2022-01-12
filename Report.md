@@ -57,13 +57,13 @@ Sampling actions for a continious action space needs to add:
 * save_model_freq = 10000  : save model frequency (in num timesteps)
 
 # **Model Hyperparameters**
-* ACTOR arcitecture :
+* ACTOR architecture :
 
 The actor network maps each state to a corresponding action.
 In our implementation, the Actor Network is a simple network consisting of 3 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units. 
 
 For optimization we have used Adam optimizer with a learning rate =0.001
-* CRITIC arcitecture : 
+* CRITIC architecture : 
 
 The critic network maps each state to its corresponding Q-value
 Also the critic  Network is a simple network consisting of 3 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units.  
