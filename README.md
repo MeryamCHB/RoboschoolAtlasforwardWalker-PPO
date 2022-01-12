@@ -1,7 +1,7 @@
 # 
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/97554187/149210232-57758917-efcc-49e7-96d1-afdb77f618ae.png "Atlas Robot"
+[image1]: https://user-images.githubusercontent.com/97554187/149222147-22088537-56a9-4178-b957-5e092de589f6.png "Atlas Robot"
 [image2]: https://user-images.githubusercontent.com/97554187/149211955-617c9a6c-46cf-4654-8e64-8e1aa0c57143.png "Roboschool"
 
 # Project 1: RoboschoolAtlasforwardWalker-PPO
