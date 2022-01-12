@@ -74,7 +74,7 @@ In order to train our agent we have to:
 1. Initialize the agent.
 2. Evaluate state and action space.
 3. Train the agent using Proximal Policy Optimization (PPO). 
-4. Iterate until agent reaches 10 million timesteps.
+4. Iterate until agent reaches 20 million timesteps.
 
 You can train the agent following the instructions in the notebook [ProjetDRL.ipynb](https://github.com/MeryamCHB/RoboschoolAtlasforwardWalker-PPO/blob/main/PROJET_DRL.ipynb)
 
