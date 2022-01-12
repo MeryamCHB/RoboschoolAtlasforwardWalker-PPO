@@ -32,6 +32,8 @@ PPO is motivated by the same question as TRPO: how can we take the biggest possi
 PPO can be used for environments with either discrete or continuous action spaces (in our environnement action space is continious). It trains a stochastic policy in an on-policy way. Also, it utilizes the actor critic method. The actor maps the observation to an action and the critic gives an expectation of the rewards of the agent for the observation given. Firstly, it collects a set of trajectories for each epoch by sampling from the latest version of the stochastic policy. Then, the rewards-to-go and the advantage estimates are computed in order to update the policy and fit the value function. Adam optimiser was used for both actor and critic. This procedure is applied for many epochs until convergence.
 
 ![image](https://user-images.githubusercontent.com/68785689/149186899-345afe14-c92f-413d-93b1-f1f5e6ec782d.png)
+
+
 Sampling actions for a continious action space needs to add: 
  * A constant/decayed standard deviation for the output action distribution (multivariate normal with diagonal covariance matrix) It is a hyperparameter and NOT a trainable parameter. However, it can be linearly decayed.
 
@@ -70,16 +72,15 @@ Also the critic  Network is a simple network consisting of 3 densely connected l
 
 For optimization we have used Adam optimizer as well with a learning rate =0.001.
 
+# **Results**
 
 
+| PPO Continuous RoboschoolHalfCheetah-v1  | PPO Continuous RoboschoolHalfCheetah-v1 |
+| :-------------------------:|:-------------------------: |
+| ![](https://user-images.githubusercontent.com/68785689/149205405-acc39538-83b5-4c7a-a0cd-91a1d2a27a06.gif) |  ![](https://user-images.githubusercontent.com/68785689/149204794-35a70647-1468-49da-8822-4796ad77d89d.png) |
 
 
-
-
-
-
-
-
+</p>
 
 
 
