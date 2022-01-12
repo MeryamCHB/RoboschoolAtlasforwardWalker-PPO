@@ -10,10 +10,9 @@
     </li>
 
    <li><a href="#Algorithm description">Algorithm description</a></li>
-           <li><a href="#Algorithm description">Agent Hyperparameters</a></li>
-
-       <li><a href="#Algorithm description">Model Hyperparameters</a></li>
-           <li><a href="#Results">Model Hyperparameters</a></li>
+   <li><a href="#Algorithm description">Agent Hyperparameters</a></li>
+   <li><a href="#Algorithm description">Model Hyperparameters</a></li>
+   <li><a href="#Results">Results</a></li>
 
 
     
