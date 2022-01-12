@@ -2,7 +2,7 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/97554187/149210232-57758917-efcc-49e7-96d1-afdb77f618ae.png "Atlas Robot"
-[video1]: https://gym.openai.com/videos/2019-09-24--SqODtxVFEQ/roboschool:RoboschoolAtlasForwardWalk-v1/original.mp4 "Roboschool"
+[image2]: https://user-images.githubusercontent.com/97554187/149211955-617c9a6c-46cf-4654-8e64-8e1aa0c57143.png "Roboschool"
 
 # Project 1: RoboschoolAtlasforwardWalker-PPO
 
@@ -15,7 +15,7 @@
 
 In this project, we will train the Atlas Robot agent to run in a racetrack using the PPO algorithm. 
 
-![Roboschool][video1]
+![Roboschool][image2]
 
 ### Installation
 
