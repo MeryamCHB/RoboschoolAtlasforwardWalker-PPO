@@ -1,3 +1,20 @@
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#Environnement description">Environnement description</a>
+      <ul>
+        <li><a href="#Atlas">Atlas</a></li>
+      </ul>
+    </li>
+
+   <li><a href="#Algorithm description">Algorithm description</a></li>
+   <li><a href="#Implementation details">Implementation details</a></li>
+
+  </ol>
+</details>
+
 # **Environnement Description**
 ### Atlas
 Atlas is a bipedal humanoid robot primarily developed by the American robotics company Boston Dynamics with funding and oversight from the U.S. Defense Advanced Research Projects Agency (DARPA). The robot was initially designed for a variety of search and rescue tasks
@@ -12,9 +29,64 @@ https://user-images.githubusercontent.com/68785689/149093559-4605f83d-26fa-4cd6-
 
 PPO is motivated by the same question as TRPO: how can we take the biggest possible improvement step on a policy using the data we currently have, without stepping so far that we accidentally cause performance collapse? Where TRPO tries to solve this problem with a complex second-order method, PPO is a family of first-order methods that use a few other tricks to keep new policies close to old. PPO methods are significantly simpler to implement, and empirically seem to perform at least as well as TRPO.
 
-PPO can be used for environments with either discrete or continuous action spaces (in our environnement action space is continious). It trains a stochastic policy in an on-policy way. Also, it utilizes the actor critic method. The actor maps the observation to an action and the critic gives an expectation of the rewards of the agent for the observation given. Firstly, it collects a set of trajectories for each epoch by sampling from the latest version of the stochastic policy. Then, the rewards-to-go and the advantage estimates are computed in order to update the policy and fit the value function. The policy is updated via a stochastic gradient ascent optimizer, while the value function is fitted via some gradient descent algorithm. This procedure is applied for many epochs until the environment is solved.
+PPO can be used for environments with either discrete or continuous action spaces (in our environnement action space is continious). It trains a stochastic policy in an on-policy way. Also, it utilizes the actor critic method. The actor maps the observation to an action and the critic gives an expectation of the rewards of the agent for the observation given. Firstly, it collects a set of trajectories for each epoch by sampling from the latest version of the stochastic policy. Then, the rewards-to-go and the advantage estimates are computed in order to update the policy and fit the value function. Adam optimiser was used for both actor and critic. This procedure is applied for many epochs until convergence.
 
 ![image](https://user-images.githubusercontent.com/68785689/149186899-345afe14-c92f-413d-93b1-f1f5e6ec782d.png)
+Sampling actions for a continious action space needs to add: 
+ * A constant/decayed standard deviation for the output action distribution (multivariate normal with diagonal covariance matrix) It is a hyperparameter and NOT a trainable parameter. However, it can be linearly decayed.
+
+ * It uses simple monte-carlo estimate for calculating advantages and NOT Generalized Advantage Estimate 
+
+# **Implementation Details**
+
+
+# **Agent Hyperparameters**
+
+- ### For training
+* max_ep_len = 1000  : is the max timesteps in one episode
+* max_training_timesteps = int(2000000) : break training loop if timeteps > max_training_timesteps
+* action_std = 0.1 : starting std for action distribution (Multivariate Normal)
+* update_timestep = max_ep_len * 4  : update policy every n timesteps
+* K_epochs = 80  :update policy for K epochs in one PPO update The idea in PPO is that you want to reuse the batch many times to * update the current policy.This means you repeat your training' k. epoch amount of times for the same batch of trajectories.
+* eps_clip = 0.2  : clip parameter for PPO  
+* gamma = 0.99            # discount factor
+
+- ### For tracking , logging and checkpoint
+* print_freq = max_ep_len * 10  : print avg reward in the interval (in num timesteps)
+* log_freq = max_ep_len * 2 : log avg reward in the interval (in num timesteps)
+* save_model_freq = 10000  : save model frequency (in num timesteps)
+
+# **Model Hyperparameters**
+* ACTOR arcitecture :
+
+The actor network maps each state to a corresponding action.
+In our implementation, the Actor Network is a simple network consisting of 3 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units. 
+
+For optimization we have used Adam optimizer with a learning rate =0.001
+* CRITIC arcitecture : 
+
+The critic network maps each state to its corresponding Q-value
+Also the critic  Network is a simple network consisting of 3 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units.  
+
+For optimization we have used Adam optimizer as well with a learning rate =0.001.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
