@@ -91,7 +91,7 @@ MSE loss function
 The video was taken from [HERE](https://github.com/chainer/chainerrl/blob/8c42022361d7013e7ed5535874a5ff71c7686698/examples/atlas/assets/atlas.gif) it doesn't reflect our results, just to give an idea about the learning objectives.
 
 
-We train the Proximal Policy Optimization agent until it can reach the maximum score of 115 for 30000 consecutive episodes with 1000 max timesteps for each episode. The agent didn't converge yet and we didn't found any baseline with the same algorithm to compare our results with but we think that adding some improvements can help the agent converge faster :
+We train the Proximal Policy Optimization agent until it can reach the maximum score of 115 for 30000 consecutive episodes with 1000 max timesteps for each episode. The agent didn't converge yet and we didn't found any baseline with the same algorithm to compare our results with but we think that adding some improvements can help the agent converge faster with better performances :
  * using learning rate scheduler 
  * using a standard deviation decaying 
  * normalizing rewards 
