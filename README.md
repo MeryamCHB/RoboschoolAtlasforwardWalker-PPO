@@ -1,8 +1,8 @@
 # 
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/97554187/149199891-d2601385-1973-4161-b994-ef846059ffc4.png "Atlas Robot"
-[vidéo1]: https://gym.openai.com/videos/2019-09-24--SqODtxVFEQ/roboschool:RoboschoolAtlasForwardWalk-v1/original.mp4 "Roboschool"
+[image1]: https://user-images.githubusercontent.com/97554187/149210232-57758917-efcc-49e7-96d1-afdb77f618ae.png "Atlas Robot"
+[video1]: https://gym.openai.com/videos/2019-09-24--SqODtxVFEQ/roboschool:RoboschoolAtlasForwardWalk-v1/original.mp4 "Roboschool"
 
 # Project 1: RoboschoolAtlasforwardWalker-PPO
 
@@ -11,13 +11,11 @@
 **Atlas**: Atlas robot is a bipedal humanoid robot, mainly developed by Boston Dynamics. At present, it can complete a series of complex movements such as walking, running and somersaults.
 
 **Roboschool**: Roboschool is a physics simulation engine based on the OpenAI Gym reinforcement learning simulation package. Roboschool ships with twelve environments, including tasks familiar to Mujoco users as well as new challenges, such as harder versions of the Humanoid walker task wich is going to be our environment for this project.
+![Atlas Robot][image1]
 
 In this project, we will train the Atlas Robot agent to run in a racetrack using the PPO algorithm. 
 
-
-![Trained Agent][image1]
-
-![Robot Agent][vidéo1]
+![Roboschool][video1]
 
 ### Installation
 
