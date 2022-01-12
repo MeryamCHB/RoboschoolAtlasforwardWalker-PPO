@@ -81,9 +81,10 @@ For optimization we have used Adam optimizer as well with a learning rate =0.001
 
 
 </p>
+The video was taken from here 
 
 
-We train the Proximal Policy Optimization agent until it can reach the maximum score of 115 for 30000 consecutive episodes with 1000 max timesteps for each episode. The agent didn't converge yet and we didn't found any baseline to compare our results with but we think that adding some improvements can help the agent converge faster :
+We train the Proximal Policy Optimization agent until it can reach the maximum score of 115 for 30000 consecutive episodes with 1000 max timesteps for each episode. The agent didn't converge yet and we didn't found any baseline with the same algorithm to compare our results with but we think that adding some improvements can help the agent converge faster :
  * using learning rate scheduler 
  * using a standard deviation decaying 
  * normalizing rewards 
