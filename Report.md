@@ -45,18 +45,18 @@ Sampling actions for a continious action space needs to add:
 # **Agent Hyperparameters**
 
 - ### For training
-* max_ep_len = 1000  : is the max timesteps in one episode
-* max_training_timesteps = int(2000000) : break training loop if timeteps > max_training_timesteps
-* action_std = 0.1 : starting std for action distribution (Multivariate Normal)
-* update_timestep = max_ep_len * 4  : update policy every n timesteps
-* K_epochs = 80  :update policy for K epochs in one PPO update The idea in PPO is that you want to reuse the batch many times to * update the current policy.This means you repeat your training' k. epoch amount of times for the same batch of trajectories.
-* eps_clip = 0.2  : clip parameter for PPO  
-* gamma = 0.99            # discount factor
+* * max_ep_len = 1000  : is the max timesteps in one episode
+* * max_training_timesteps = int(2000000) : break training loop if timeteps > max_training_timesteps
+* * action_std = 0.1 : starting std for action distribution (Multivariate Normal)
+* * update_timestep = max_ep_len * 4  : update policy every n timesteps
+* * K_epochs = 80  :update policy for K epochs in one PPO update The idea in PPO is that you want to reuse the batch many times to * update the current policy.This means you repeat your training' k. epoch amount of times for the same batch of trajectories.
+* * eps_clip = 0.2  : clip parameter for PPO  
+* * gamma = 0.99            # discount factor
 
 - ### For tracking , logging and checkpoint
-* print_freq = max_ep_len * 10  : print avg reward in the interval (in num timesteps)
-* log_freq = max_ep_len * 2 : log avg reward in the interval (in num timesteps)
-* save_model_freq = 10000  : save model frequency (in num timesteps)
+* * print_freq = max_ep_len * 10  : print avg reward in the interval (in num timesteps)
+* * log_freq = max_ep_len * 2 : log avg reward in the interval (in num timesteps)
+* * save_model_freq = 10000  : save model frequency (in num timesteps)
 
 # **Model Hyperparameters**
 * ACTOR architecture :
