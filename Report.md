@@ -87,7 +87,8 @@ MSE loss function
 | ![](https://user-images.githubusercontent.com/68785689/149205405-acc39538-83b5-4c7a-a0cd-91a1d2a27a06.gif) |  ![](https://user-images.githubusercontent.com/68785689/149204794-35a70647-1468-49da-8822-4796ad77d89d.png) |
 
 
-</p>
+
+
 The video was taken from [HERE](https://github.com/chainer/chainerrl/blob/8c42022361d7013e7ed5535874a5ff71c7686698/examples/atlas/assets/atlas.gif) it doesn't reflect our results, just to give an idea about the learning objectives.
 
 
