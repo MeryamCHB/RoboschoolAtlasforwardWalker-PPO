@@ -67,14 +67,14 @@ Sampling actions for a continious action space needs to add:
 * ACTOR architecture :
 
 The actor network maps each state to a corresponding action.
-In our implementation, the Actor Network is a simple network consisting of 3 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units. 
+In our implementation, the Actor Network is a simple network consisting of 2 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units. 
 
 For optimization we have used Adam optimizer with a learning rate =0.001
 MSE loss function
 * CRITIC architecture : 
 
 The critic network maps each state to its corresponding Q-value
-Also the critic  Network is a simple network consisting of 3 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units.  
+Also the critic  Network is a simple network consisting of 2 densely connected layers with the Tanh activation function. Each hidden layer has 64 hidden units.  
 
 For optimization we have used Adam optimizer as well with a learning rate =0.001.
 MSE loss function
