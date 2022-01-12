@@ -10,7 +10,13 @@
     </li>
 
    <li><a href="#Algorithm description">Algorithm description</a></li>
-   <li><a href="#Implementation details">Implementation details</a></li>
+           <li><a href="#Algorithm description">Agent Hyperparameters</a></li>
+
+       <li><a href="#Algorithm description">Model Hyperparameters</a></li>
+           <li><a href="#Results">Model Hyperparameters</a></li>
+
+
+    
 
   </ol>
 </details>
@@ -39,7 +45,6 @@ Sampling actions for a continious action space needs to add:
 
  * It uses simple monte-carlo estimate for calculating advantages and NOT Generalized Advantage Estimate 
 
-# **Implementation Details**
 
 
 # **Agent Hyperparameters**
